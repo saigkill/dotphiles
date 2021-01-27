@@ -15,14 +15,26 @@ if has("user_commands")
   filetype off
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
-  "let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
-  let g:vundles=['general', 'programming']
+  "let g:vundles=['general', 'git', 'programming', 'completion', 'ruby', 'python', 'misc', 'php', 'javascript', 'html']
+  let g:vundles=['general', 'programming', 'git', 'python', 'misc', 'php', 'javascript', 'html']
   let g:neocomplcache_enable_at_startup = 1
   " Load 'vundles'
   source ~/.vim/vundles.vim
   " Add extra bundles here...
   " Bundle 'reponame'
+  Bundle 'Lokaltog/vim-powerline'
+  Bundle 'wakatime/vim-wakatime'
 endif
 
 " Customize to your needs...
-
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+call plug#begin()
+Plug 'https://gitlab.com/code-stats/code-stats-vim.git'
+let g:codestats_api_key = 'SFMyNTY.YzJGcFoydHBiR3c9IyNNakF4.ICdCUkkSHD88FoxhBZVGtdjpaneTRbnBSXksE3YAssk'
+let g:airline_section_x = airline#section#create_right(['tagbar', 'filetype', '%{CodeStatsXp()}'])
+Plug 'vim-airline/vim-airline'
+call plug#end()

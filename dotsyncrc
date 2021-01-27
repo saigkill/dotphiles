@@ -20,16 +20,16 @@
 dotsyncrc
 #ack/ackrc
 #aptitude
-#bin:bin
+bin:bin
 #ctags/ctags
 #cmus
-#curl/curlrc
-#git/gitconfig
-#git/gitignore
-#git/gitattributes
+curl/curlrc
+git/gitconfig
+git/gitignore
+git/gitattributes
 #git/tigrc
 #git/gitk
-#gnupg
+gnupg
 #grc
 #input/editrc
 #input/inputrc
@@ -40,12 +40,12 @@ dotsyncrc
 #mutt
 #mutt/muttrc
 #mutt/offlineimaprc
-#mysql/my.cnf
+mysql/my.cnf
 #ncmpcpp/config
 #ncmpcpp/error.log
 #postgresql/psqlrc
-#python/pythonrc
-#python/pylintrc
+python/pythonrc
+python/pylintrc
 #rpm/rpmmacros
 #ruby/irbrc
 #ruby/pryrc
@@ -63,10 +63,10 @@ dotsyncrc
 #task/taskrc
 #tmux/tmux.conf
 #tmux/tmuxinator
-#vim/dotvim:.vim
-#vim/vimrc
+vim/dotvim:.vim
+vim/vimrc
 #vim/gvimrc
-#wget/wgetrc
+wget/wgetrc
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
 #zsh/zlogin
@@ -79,6 +79,7 @@ dotsyncrc
 # Hosts to sync
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
+Sascha-PC			 git=ANY						#git repo, pull from anywhere
 #host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
 #host2.example.com               git=ANY                                                #git repo, pull from anywhere
 #host3.example.com               git=ANY                                                #git repo, pull from anywhere

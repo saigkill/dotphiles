@@ -9,6 +9,8 @@
 
 # Global Config
 [user]
+	email = Sascha.Manns@outlook.de
+	name = Sascha Manns
     #name = "**Your Name**"
     #email = "**Your Email**"
     #signingkey = **Your GPG ID**
